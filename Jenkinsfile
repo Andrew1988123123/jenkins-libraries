@@ -22,7 +22,7 @@ def template_vars = [
 ]
 pod = renderTemplate(pod, template_vars)
 
-// def sharedLibrary = new com.org.foo.sharedLibrary()
+def sharedLibrary = new com.org.foo.sharedLibrary()
 
 def compileData = [run: true]
 def testData = [run: true]

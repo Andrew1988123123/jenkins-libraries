@@ -44,4 +44,4 @@ def buildCommands = [
 def slackChannel = "k8s-jenkins"
 
 
-commonPipeline(sharedLibrary, svcName, buildCommands, pod, slackChannel)
+commonPipeline(svcName, buildCommands, pod, slackChannel)

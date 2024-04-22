@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 import groovy.text.StreamingTemplateEngine
 
-def call(sharedLibrary, svcName, buildCommands, pod, slackChannel) {
+def call(svcName, buildCommands, pod, slackChannel) {
     if (pod.contains("<%")) {
         pod = new StreamingTemplateEngine().createTemplate(pod).make(['' : '']).toString()
     }

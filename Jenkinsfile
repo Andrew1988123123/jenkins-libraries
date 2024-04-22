@@ -44,5 +44,5 @@ def buildCommands = [
 def slackChannel = "k8s-jenkins"
 
 timestamps {
-    commonPipeline(svcName, buildCommands, pod, slackChannel)
+    pipeline(svcName, buildCommands, pod, slackChannel)
 }

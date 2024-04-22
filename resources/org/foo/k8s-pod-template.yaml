@@ -3,19 +3,19 @@ kind: Pod
 metadata:
   labels:
     product: datascience
-app: ${build_label}
-buildnode: 'true'
+    app: ${build_label}
+    buildnode: 'true'
 spec:
   serviceAccountName: jenkins
   containers:
     - name: node
-image: ${node_image_repository}:${node_version}
-imagePullPolicy: IfNotPresent
-command:
-  - cat
-tty: true
-volumes:
-  - hostPath:
-      path: /var/run/docker.sock
-      type: ''
-    name: dockersock
+      image: ${node_image_repository}:${node_version}
+      imagePullPolicy: IfNotPresent
+      command:
+        - cat
+      tty: true
+  volumes:
+    - hostPath:
+        path: /var/run/docker.sock
+        type: ''
+      name: dockersock

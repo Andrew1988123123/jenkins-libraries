@@ -22,7 +22,7 @@ def template_vars = [
 ]
 pod = renderTemplate(pod, template_vars)
 
-def sharedLibrary = new com.org.foo.sharedLibrary()
+// def sharedLibrary = new com.org.foo.sharedLibrary()
 
 def compileData = [run: true]
 def testData = [run: true]
@@ -44,5 +44,5 @@ def buildCommands = [
 def slackChannel = "k8s-jenkins"
 
 timestamps {
-    commonPipeline(sharedLibrary, svcName, buildCommands, pod, slackChannel)
+    commonPipeline(svcName, buildCommands, pod, slackChannel)
 }

@@ -1,5 +1,6 @@
-#!/usr/bin/env groovy
 package org.foo
-
-class dd {
+class Utilities {
+    static def mvn(script, args) {
+        script.sh "${script.tool 'Maven'}/bin/mvn -s ${script.env.HOME}/jenkins.xml -o ${args}"
+    }
 }

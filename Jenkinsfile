@@ -43,6 +43,6 @@ def buildCommands = [
 // Set slack channel
 def slackChannel = "k8s-jenkins"
 
-timestamps {
-    commonPipeline(sharedLibrary, svcName, buildCommands, pod, slackChannel)
-}
+// timestamps {
+//     commonPipeline(sharedLibrary, svcName, buildCommands, pod, slackChannel)
+// }

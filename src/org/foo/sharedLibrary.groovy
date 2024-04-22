@@ -1,4 +1,7 @@
 #!/usr/bin/env groovy
 package org.foo
 
-println "hi"
+
+def call() {
+    println "hi"
+}

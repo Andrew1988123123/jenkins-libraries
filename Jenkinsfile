@@ -4,7 +4,7 @@
 def svcName = currentBuild.rawBuild.project.parent.displayName
 
 //get pod template definition
-def pod = libraryResource 'org/foo/k8s-pod-template.groovy'
+def pod = libraryResource 'org/foo/k8s-pod-template.yaml'
 def image_dependencies =
 '''
     - name: fermium-alpine
